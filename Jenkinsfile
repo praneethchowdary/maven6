@@ -28,6 +28,7 @@ pipeline {
                 script {
                     sh """
                         chmod +x deploy.sh
+                        deploy.sh
                     """
                 }
             }

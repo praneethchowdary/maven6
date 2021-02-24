@@ -28,7 +28,7 @@ pipeline {
                 script {
                     sh """
                         chmod +x deploy.sh
-                        deploy.sh
+                        sh deploy.sh
                     """
                 }
             }

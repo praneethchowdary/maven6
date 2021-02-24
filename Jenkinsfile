@@ -11,6 +11,7 @@ pipeline {
                         mvn clean install -f pom.xml
                     """
                 }
+                archiveArtifacts artifacts: "target/*", defaultExcludes: false
             }
         }
         stage('test') {
@@ -18,6 +19,15 @@ pipeline {
                 script {
                     sh """
                         mvn test
+                    """
+                }
+            }
+        }
+        stage('deploy') {
+            steps {
+                script {
+                    sh """
+                        ls -lrt
                     """
                 }
             }

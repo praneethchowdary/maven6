@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        ls -lrt
+                        chmod +x deploy.sh
                     """
                 }
             }
